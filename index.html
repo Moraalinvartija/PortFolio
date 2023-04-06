@@ -41,7 +41,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
           <p class="w3-large"><b><i class="fa-solid fa-code fa-fw w3-margin-right w3-text-teal"></i>Ohjelmointi</b></p>
           <p>HTML ja CSS</p>
           <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">80%</div>
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">60%</div>
           </div>
           <p>PHP</p>
           <div class="w3-light-grey w3-round-xlarge w3-small">
@@ -85,9 +85,28 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         
         <div class="w3-container">
 
-          <button onclick="hideAndShow('accordion1')" class="w3-btn w3-block w3-teal w3-left-align "><i class="fa fa-caret-down"></i> Näytä projektit </button>
+          <button onclick="hideAndShow('accordion1')" class="w3-btn w3-block w3-teal w3-left-align" ><i class="fa fa-caret-down" ></i> <label id="test"> Näytä projektit</label> </button>
           <div id="accordion1" class="w3-container w3-hide">
-            <h5 class="w3-opacity"><b>Spell Checker DnD 5e (API, Javascript)</b></h5>
+            
+          <h5 class="w3-opacity"><b>REST API Fetchillä (PHP, Javascript)</b></h5>
+            <a href="https://github.com/Moraalinvartija/buildedAPI">Github linkki</a>
+            <p>- REST API josta haetaan tietoa fetchillä<br>- CRUD operaatiot <br>- Käyttöliittymä niin, että käyttäjä voi lukea, tallettaa, poistaa ja etsiä SQL tietokannasta tietoa. Tiedot päivittyvät reaaliajassa</p>
+            <div class="w3-display-container">
+              <img src="assets/REST API.webp" style="width:100%" alt="Avatar">
+              <div class="w3-display-bottomleft w3-container w3-text-black">
+              </div>
+          </div>
+          <hr>
+          <h5 class="w3-opacity"><b>PHP kirjautumisjärjestelmä (PHP)</b></h5>
+            <a href="https://github.com/Moraalinvartija/Php_login">Github linkki</a>
+            <p>- Koulutehtävä kirjautumisjärjestelmä PHP:tä käyttäen (pelkät toiminnallisuudet)<br>- Rekistöröinti SQL tietokantaan uutta käyttäjätiliä luodessa <br>- Sisäänkirjaus joko käyttäjätunnuksella tai sähköpostilla <br>- Salasanan hashaus tietokantaan<br>- </p>
+            <div class="w3-display-container">
+              <img src="assets/php_login.webp" style="width:100%" alt="Avatar">
+              <div class="w3-display-bottomleft w3-container w3-text-black">
+              </div>
+          </div>
+          <hr>
+          <h5 class="w3-opacity"><b>Spell Checker DnD 5e (API, Javascript)</b></h5>
             <a href="https://geronimo.okol.org/~aijjuh/spell_checker/index.html">Demo linkki</a><br>
             <a href="https://github.com/Moraalinvartija/SpellCheckerAPI">Github linkki</a>
             <p>- Noudetaan tietoa API:sta ja tulostetaan sen ruudulle<br>- Listataan kaikki loitsut API:sta valikkoo <br>- Valikosta valitsemalla noudetaan loitsun tarkemmat tiedot API:sta</p>
@@ -97,14 +116,6 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
               </div>
           </div>
           <hr>
-          <h5 class="w3-opacity"><b>REST API Fetchillä</b></h5>
-            <a href="https://github.com/Moraalinvartija/buildedAPI">Github linkki</a>
-            <p>- REST API josta haetaan tietoa fetchillä<br>- CRUD operaatiot <br>- Käyttöliittymä niin, että käyttäjä voi lukea, tallettaa, poistaa ja etsiä SQL tietokannasta tietoa. Tiedot päivittyvät reaaliajassa</p>
-            <div class="w3-display-container">
-              <img src="assets/REST API.webp" style="width:100%" alt="Avatar">
-              <div class="w3-display-bottomleft w3-container w3-text-black">
-              </div>
-          </div>
           <br>
         </div>
       </div>
@@ -174,11 +185,13 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
     x.previousElementSibling.className = 
-    x.previousElementSibling.className.replace("w3-teal", "w3-dark-grey");
+    x.previousElementSibling.className.replace("w3-teal", "w3-dark-grey")
+    document.getElementById("test").innerHTML = "Sulje projektit"; 
   } else { 
     x.className = x.className.replace(" w3-show", "");
     x.previousElementSibling.className = 
-    x.previousElementSibling.className.replace("w3-dark-grey", "w3-teal");
+    x.previousElementSibling.className.replace("w3-dark-grey", "w3-teal")
+    document.getElementById("test").innerHTML = "Näytä projektit"; 
   }
 }
   </script>
